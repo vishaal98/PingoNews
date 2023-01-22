@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pingo_news/providers/comments_provider.dart';
 import 'package:pingo_news/screens/login_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const PingoNews());
@@ -15,8 +17,13 @@ class PingoNews extends StatefulWidget {
 class _PingoNewsState extends State<PingoNews> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginPage(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CommentsProvider()),
+      ],
+      child: const MaterialApp(
+        home: LoginPage(),
+      ),
     );
   }
 }
