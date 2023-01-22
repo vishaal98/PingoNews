@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "439493269212",
+    "project_id": "pingo-news",
+    "storage_bucket": "pingo-news.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439493269212:android:bf7433e965ca4ed2cc4619",
+        "android_client_info": {
+          "package_name": "com.example.pingo_news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439493269212-uu0rq2tohu2l5qsmiv2407a6rm8pkc09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe6LBvRFD1ja8tXNVP5993g4Y6NQMYHis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439493269212-uu0rq2tohu2l5qsmiv2407a6rm8pkc09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

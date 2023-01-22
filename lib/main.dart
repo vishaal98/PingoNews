@@ -1,9 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pingo_news/providers/comments_provider.dart';
+import 'package:pingo_news/providers/login_provider.dart';
 import 'package:pingo_news/screens/login_page.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const PingoNews());
 }
 
@@ -20,6 +24,7 @@ class _PingoNewsState extends State<PingoNews> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => CommentsProvider()),
+        ChangeNotifierProvider(create: (context) => LoginProvider()),
       ],
       child: const MaterialApp(
         home: LoginPage(),

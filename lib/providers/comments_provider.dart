@@ -14,12 +14,12 @@ class CommentsProvider with ChangeNotifier {
           await get(Uri.parse("https://jsonplaceholder.typicode.com/comments"));
       if (response.statusCode == 200) {
         List<dynamic> responseBody = jsonDecode(response.body);
-        List<Comments> comments = responseBody
+
+        return responseBody
             .map(
               (dynamic item) => Comments.fromJson(item),
             )
             .toList();
-        return comments;
       } else {
         throw "Unable to retrieve comments.";
       }
@@ -31,5 +31,6 @@ class CommentsProvider with ChangeNotifier {
 
   Future<void> getComments() async {
     commentsList = await fetchComments();
+    notifyListeners();
   }
 }
